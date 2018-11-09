@@ -1,0 +1,5 @@
+app = Model
+resources/views = views
+http/Controllers/
+
+php artisan make: controller -r //Generate a resource controller class
