@@ -17,9 +17,15 @@ Route::get('/messages', 'PageController@messages');
 Route::get('/signin', 'PageController@signin');
 Route::get('/shopcar', 'PageController@shopcar');
 
+// Route::resource('/cars', 'Car_modelsController');
+Route::get('/cars/{model}', 'Car_modelsController@show');
+Route::resource('/bikes', 'Bike_modelsController');
+Route::resource('/laptops', 'Laptop_modelsController');
+Route::resource('/tvs', 'Tv_modelsController');
+
 // Route::get('/brands', 'Car_brandsController@index');
 // Route::resource('brands', 'Bike_brandsController');
-Route::resource('/', 'Car_brandsController');
+Route::resource('/', 'Product_brandsController');
 Route::resource('projects', 'ProjectsController');
 
 // Route::get('/projects/create', 'ProjectsController@create');

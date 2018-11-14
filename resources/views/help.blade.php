@@ -1,4 +1,8 @@
 @extends('layout')
+@section('other_styles')
+    <link rel="stylesheet" href="css/main.css">
+    {{-- You can load any other stylesheets --}}
+@endsection
 
 @section('title', 'Help')
 

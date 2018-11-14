@@ -1,5 +1,9 @@
 
 @extends('layout')
+@section('other_styles')
+    <link rel="stylesheet" href="css/main.css">
+    {{-- You can load any other stylesheets --}}
+@endsection
 
 @section('title', 'Home')
 @section('header')
@@ -32,7 +36,7 @@
         <h2>Cars</h2>
          @foreach ($car_brands as $car_brand)
             <div class="sub-content">
-                    <a href="cars.php?category=<?php $car_brand->name; ?>"><li>{{$car_brand->name}}</li> </a>
+                    <a href="cars/category={{$car_brand->name}}"><li>{{$car_brand->name}}</li> </a>
             </div>
         @endforeach
     </div>
@@ -40,7 +44,7 @@
         <h2>Bikes</h2>
          @foreach ($bike_brands as $bike_brand)
             <div class="sub-content">
-                    <a href="bikes.php?category=<?php $bike_brand->name; ?>"><li>{{$bike_brand->name}}</li> </a>
+                    <a href="bikes/category=<?php $bike_brand->name; ?>"><li>{{$bike_brand->name}}</li> </a>
             </div>
         @endforeach
     </div>
@@ -48,16 +52,15 @@
         <h2>Laptops</h2>
           @foreach ($laptop_brands as $laptop_brand)
             <div class="sub-content">
-                    <a href="laptops.php?category=<?php $laptop_brand->name; ?>"><li>{{$laptop_brand->name}}</li> </a>
+                    <a href="laptops/category=<?php $laptop_brand->name; ?>"><li>{{$laptop_brand->name}}</li> </a>
             </div>
         @endforeach
     </div>
     <div class="sub-content"> 
         <h2>TVs</h2>
-      
          @foreach ($tv_brands as $tv_brand)
             <div class="sub-content">
-                    <a href="tvs.php?category=<?php $tv_brand->name; ?>"><li>{{$tv_brand->name}}</li> </a>
+                    <a href="tvs/category=<?php $tv_brand->name; ?>"><li>{{$tv_brand->name}}</li> </a>
             </div>
         @endforeach
         </div>

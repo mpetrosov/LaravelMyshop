@@ -17,6 +17,14 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+$(document).ready(function(){
+    $('.test').test({
+        items: 1,
+        URLhashListener:true,
+        mouseDrag:false
+    });
+});
+
 const app = new Vue({
     el: '#app'
 });

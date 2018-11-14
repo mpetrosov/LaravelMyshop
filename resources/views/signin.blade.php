@@ -1,6 +1,10 @@
 
 
 @extends('layout')
+@section('other_styles')
+    <link rel="stylesheet" href="css/main.css">
+    {{-- You can load any other stylesheets --}}
+@endsection
 
 @section('title', 'Login')
 
@@ -16,7 +20,7 @@
             <a href="/messages" class="button-help">messages<i class="fas fa-comments"></i></a>
         </div>
         <div class="login">
-            <a href="/signin" class="button-help">login<i class="fas fa-sign-in-alt"></i></a>
+            <a href="/signin" class="button-help">logout<i class="fas fa-sign-in-alt"></i></a>
         </div>
         <div class="shopcar">
             <a href="/shopcar" class="button-help">cart<i class="fas fa-shopping-cart"></i></a>

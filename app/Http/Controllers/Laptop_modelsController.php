@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Car_brand;
-use App\Bike_brand;
-use App\Laptop_brand;
-use App\Tv_brand;
+use App\Laptop_model;
 use Illuminate\Http\Request;
 
-class Car_brandsController extends Controller
+class Laptop_modelsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +14,7 @@ class Car_brandsController extends Controller
      */
     public function index()
     {
-        $tv_brands = Tv_brand::all();
-        $laptop_brands = Laptop_brand::all();
-        $bike_brands = Bike_brand::all();
-        $car_brands = Car_brand::all();
-
-        return view('main', compact('car_brands', 'bike_brands','laptop_brands','tv_brands'));
+        //
     }
 
     /**
@@ -49,10 +41,10 @@ class Car_brandsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Car_brand  $car_brand
+     * @param  \App\Laptop_model  $laptop_model
      * @return \Illuminate\Http\Response
      */
-    public function show(Car_brand $car_brand)
+    public function show(Laptop_model $laptop_model)
     {
         //
     }
@@ -60,10 +52,10 @@ class Car_brandsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Car_brand  $car_brand
+     * @param  \App\Laptop_model  $laptop_model
      * @return \Illuminate\Http\Response
      */
-    public function edit(Car_brand $car_brand)
+    public function edit(Laptop_model $laptop_model)
     {
         //
     }
@@ -72,10 +64,10 @@ class Car_brandsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Car_brand  $car_brand
+     * @param  \App\Laptop_model  $laptop_model
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Car_brand $car_brand)
+    public function update(Request $request, Laptop_model $laptop_model)
     {
         //
     }
@@ -83,10 +75,10 @@ class Car_brandsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Car_brand  $car_brand
+     * @param  \App\Laptop_model  $laptop_model
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Car_brand $car_brand)
+    public function destroy(Laptop_model $laptop_model)
     {
         //
     }
