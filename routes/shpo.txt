@@ -3,3 +3,12 @@ resources/views = views
 http/Controllers/= all your Controllers
 
 php artisan make: controller -r //Generate a resource controller class
+
+route methods are:
+get
+post
+put
+delete
+patch
+options
+

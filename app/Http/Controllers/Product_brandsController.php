@@ -17,10 +17,10 @@ class Product_brandsController extends Controller
      */
     public function index()
     {
-        $tv_brands = Tv_brand::all();
-        $laptop_brands = Laptop_brand::all();
-        $bike_brands = Bike_brand::all();
-        $car_brands = Car_brand::all();
+         $car_brands = Car_brand::all();
+         $bike_brands = Bike_brand::all();
+         $laptop_brands = Laptop_brand::all();
+         $tv_brands = Tv_brand::all();     
 
         return view('main', compact('car_brands', 'bike_brands','laptop_brands','tv_brands'));
     }
@@ -49,10 +49,10 @@ class Product_brandsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Car_brand  $car_brand
+     * @param  \App\Product_brand  $product_brand
      * @return \Illuminate\Http\Response
      */
-    public function show(Car_brand $car_brand)
+    public function show(Product_brand $product_brand)
     {
         //
     }
@@ -60,10 +60,10 @@ class Product_brandsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Car_brand  $car_brand
+     * @param  \App\Product_brand  $product_brand
      * @return \Illuminate\Http\Response
      */
-    public function edit(Car_brand $car_brand)
+    public function edit(Product_brand $product_brand)
     {
         //
     }
@@ -72,10 +72,10 @@ class Product_brandsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Car_brand  $car_brand
+     * @param  \App\Product_brand  $product_brand
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Car_brand $car_brand)
+    public function update(Request $request, Product_brand $product_brand)
     {
         //
     }
@@ -83,10 +83,10 @@ class Product_brandsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Car_brand  $car_brand
+     * @param  \App\Product_brand  $product_brand
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Car_brand $car_brand)
+    public function destroy(Product_brand $product_brand)
     {
         //
     }

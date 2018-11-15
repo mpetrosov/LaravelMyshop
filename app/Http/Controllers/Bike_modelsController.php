@@ -44,9 +44,11 @@ class Bike_modelsController extends Controller
      * @param  \App\Bike_model  $bike_model
      * @return \Illuminate\Http\Response
      */
-    public function show(Bike_model $bike_model)
+    public function show($id)
     {
-        //
+        $bike_models = Bike_model::where('bike_id', $id)->get();
+
+        return view('bikes', compact('bike_models'));
     }
 
     /**

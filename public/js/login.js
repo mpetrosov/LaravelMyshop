@@ -11,7 +11,7 @@ $(function(){
 });
 
 $(document).ready(function() {
-    var basePath = 'http://localhost/myshop/';
+    var basePath = 'http://localhost:8000/';
     $('#category-selector').on('change', function(event) {
         event.preventDefault();
         var select = $(this);

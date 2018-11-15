@@ -36,7 +36,7 @@
         <h2>Cars</h2>
          @foreach ($car_brands as $car_brand)
             <div class="sub-content">
-                    <a href="cars/category={{$car_brand->name}}"><li>{{$car_brand->name}}</li> </a>
+                <a href="cars/{{$car_brand->id}}/show"><li>{{$car_brand->name}}</li> </a>
             </div>
         @endforeach
     </div>
@@ -44,7 +44,7 @@
         <h2>Bikes</h2>
          @foreach ($bike_brands as $bike_brand)
             <div class="sub-content">
-                    <a href="bikes/category=<?php $bike_brand->name; ?>"><li>{{$bike_brand->name}}</li> </a>
+                <a href="bikes/{{$bike_brand->id}}/show"><li>{{$bike_brand->name}}</li> </a>
             </div>
         @endforeach
     </div>
@@ -52,7 +52,7 @@
         <h2>Laptops</h2>
           @foreach ($laptop_brands as $laptop_brand)
             <div class="sub-content">
-                    <a href="laptops/category=<?php $laptop_brand->name; ?>"><li>{{$laptop_brand->name}}</li> </a>
+                <a href="laptops/{{$laptop_brand->id}}/show"><li>{{$laptop_brand->name}}</li> </a>
             </div>
         @endforeach
     </div>

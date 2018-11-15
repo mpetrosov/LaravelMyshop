@@ -18,14 +18,14 @@ Route::get('/signin', 'PageController@signin');
 Route::get('/shopcar', 'PageController@shopcar');
 
 // Route::resource('/cars', 'Car_modelsController');
-Route::get('/cars/{model}', 'Car_modelsController@show');
-Route::resource('/bikes', 'Bike_modelsController');
-Route::resource('/laptops', 'Laptop_modelsController');
+Route::get('/cars/{name}/show', 'Car_modelsController@show');
+Route::get('/bikes/{name}/show', 'Bike_modelsController@show');
+Route::get('/laptops/{name}/show', 'Laptop_modelsController@show');
 Route::resource('/tvs', 'Tv_modelsController');
 
 // Route::get('/brands', 'Car_brandsController@index');
 // Route::resource('brands', 'Bike_brandsController');
-Route::resource('/', 'Product_brandsController');
+Route::get('/', 'Product_brandsController@index');
 Route::resource('projects', 'ProjectsController');
 
 // Route::get('/projects/create', 'ProjectsController@create');

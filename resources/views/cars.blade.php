@@ -1,7 +1,14 @@
-@extends('layout')
+@extends('product-layout')
 @section('other_styles')
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../../css/main.css">
     {{-- You can load any other stylesheets --}}
+@endsection
+@section('scripts')
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+    <script src="../../js/login.js"></script>
 @endsection
 @section('title', 'Cars')
 @section('header')
@@ -29,3 +36,45 @@
         </div>            
     </div>
 @endsection
+    @section('product-container')
+    <div class="product-sidebar">
+            <h2>Groups</h2> 
+            <div class="select">
+                <select id="category-selector">
+                <?php
+                // $currentController = $_SERVER['SCRIPT_NAME'];
+                // if (endsWith($currentController, 'index.php')) {
+                    ?>
+                    <option>All</option>
+                    <?php
+                //}
+
+
+                //foreach($arrGroups as $key=>$value){?>
+
+                    
+                        <option value="cars">cars</option>
+                        <option value="bikes">bikes</option>
+                        <option value="laptops">laptops</option>
+                        <option value="tvs">tvs</option>
+
+                </select>
+            </div>
+
+            
+        </div>
+        <div class="product-content">
+            <div class="sub-header">CARS</div>
+            @foreach ($car_models as $car_model)
+               
+                <div class="product-view">
+                    <h3>{{$car_model->name}}</h3>
+                    <p>{{$car_model->id}}</p>
+                    <p>Price{{$car_model->price}}</p>
+                    <p>Date of manufacture{{$car_model->dateOfManufacture}}</p>
+                </div>
+            @endforeach  
+        </div>
+    @endsection
+            
+    

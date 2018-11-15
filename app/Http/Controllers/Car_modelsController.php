@@ -44,9 +44,10 @@ class Car_modelsController extends Controller
      * @param  \App\Car_model  $car_model
      * @return \Illuminate\Http\Response
      */
-    public function show(Car_model $car_model)
+    public function show($id)
     {
-        
+        $car_models = Car_model::where('car_id', $id)->get();
+
         return view('cars', compact('car_models'));
     }
 
